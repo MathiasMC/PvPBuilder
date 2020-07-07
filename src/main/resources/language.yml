@@ -1,0 +1,364 @@
+#                                         #
+#                PvPBuilder               #
+#                   by                    #
+#                MathiasMC                #
+#  Any ideas for the plugin or need help? #
+#           contact me on spigot          #
+#                                         #
+player:
+  pvpbuilder:
+    command:
+      permission:
+        - '&7[&bPvPBuilder&7] &cYou dont have access to use this command!'
+      unknown:
+        - '&7[&bPvPBuilder&7] &cUnknown sub command &f{pvpbuilder_command}'
+      message:
+        - '&c&m---------------------------------------------'
+        - '&7&l> &bPvPBuilder created by &eMathiasMC'
+        - '&7&l> &bVersion: &e{pvpbuilder_version}'
+        - '&7&l> &f/pvpbuilder help for list of commands'
+        - '&7&l> &2Any ideas for the plugin or need help?'
+        - '&7&l> &2Contact me on spigot'
+        - '&c&m---------------------------------------------'
+    help:
+      permission:
+        - '&7[&bPvPBuilder&7] &cYou dont have access to use this command!'
+      message:
+        - '&c&m---------------------------------------------'
+        - '&7&l> &f/pvpbuilder reload'
+        - '&7&l> &f/pvpbuilder message <player> <text>'
+        - '&7&l> &f/pvpbuilder wand'
+        - '&7&l> &f/pvpbuilder setup fileName.yml'
+        - '&7&l> &f/pvpbuilder zone set fileName.yml'
+        - '&7&l> &f/pvpbuilder zone remove fileName.yml'
+        - '&7&l> &f/pvpbuilder give block <player> <fileName.yml> <amount>'
+        - '&7&l> &f/pvpbuilder spawn type <typeName> <worldName> <x> <y> <z>'
+        - '&7&l> &f/pvpbuilder spawn effect <typeName> <player> <duration> <amplifier> <ambient> <particles>'
+        - '&7&l> &f/pvpbuilder spawn sound <typeName> <worldName> <x> <y> <z> <volume> <pitch>'
+        - '&7&l> &f/pvpbuilder spawn custom <lightning_strike> <worldName> <x> <y> <z>'
+        - '&7&l> &f/pvpbuilder spawn custom firework <worldName> <x> <y> <z> <power> <RGB red,green,blue:red,green,blue> <fade RGB red,green,blue:red,green,blue, null> <ballType> <flicker> <trail>'
+        - '&c&m---------------------------------------------'
+    reload:
+      permission:
+        - '&7[&bPvPBuilder&7] &cYou dont have access to use this command!'
+      reloaded:
+        - '&7[&bPvPBuilder&7] &aReloaded all configs!'
+    message:
+      permission:
+        - '&7[&bPvPBuilder&7] &cYou dont have access to use this command!'
+      usage:
+        - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder message <player> <text>'
+      online:
+        - '&7[&bPvPBuilder&7] &cThat player is not online!'
+    wand:
+      permission:
+        - '&7[&bPvPBuilder&7] &cYou dont have access to use this command!'
+      add:
+        - '&7[&bPvPBuilder&7] &aAdded &bPvPBuilder Wand'
+      set:
+        permission:
+          - '&7[&bPvPBuilder&7] &cYou dont have permission to use this wand!'
+        '1':
+          - '&7[&bPvPBuilder&7] &aPos 1 set to &f{pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z}'
+        '2':
+          - '&7[&bPvPBuilder&7] &aPos 2 set to &f{pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z}'
+        clear:
+          - '&7[&bPvPBuilder&7] &aCleared all pos'
+        same:
+          - '&7[&bPvPBuilder&7] &cYou cannot select the same point!'
+    setup:
+      permission:
+        - '&7[&bPvPBuilder&7] &cYou dont have access to use this command!'
+      usage:
+        - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder setup fileName.yml'
+      file:
+        - '&7[&bPvPBuilder&7] &cThe file &6{pvpbuilder_file} &cis not found!'
+      material:
+        - '&7[&bPvPBuilder&7] &cYou dont have any material in your hand!'
+      list:
+        - '&7[&bPvPBuilder&7] &aAvailable fileNames:'
+        - '&7[&bPvPBuilder&7] &c{pvpbuilder_files}'
+      add:
+        - '&7[&bPvPBuilder&7] &aAdded your current item to &6{pvpbuilder_file} &afor the changes to take effect use must use &6/pvpbuilder reload'
+    zone:
+      permission:
+        - '&7[&bPvPBuilder&7] &cYou dont have access to use this command!'
+      usage:
+        - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder zone set/remove'
+      file:
+        - '&7[&bPvPBuilder&7] &cThe file &6{pvpbuilder_file} &cis not found!'
+      select:
+        - '&7[&bPvPBuilder&7] &cYou need to select 2 points with /pvpbuilder wand'
+      set:
+        permission:
+          - '&7[&bPvPBuilder&7] &cYou dont have access to use this command!'
+        usage:
+          - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder zone set fileName.yml'
+        set:
+          - '&7[&bPvPBuilder&7] &aCreated zone for {pvpbuilder_file}'
+      remove:
+        permission:
+          - '&7[&bPvPBuilder&7] &cYou dont have access to use this command!'
+        usage:
+          - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder zone remove fileName.yml'
+        removed:
+          - '&7[&bPvPBuilder&7] &aRemoved zone for {pvpbuilder_file}'
+    give:
+      permission:
+        - '&7[&bPvPBuilder&7] &cYou dont have access to use this command!'
+      usage:
+        - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder give block'
+      block:
+        usage:
+          - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder give block <player> <fileName.yml> <amount>'
+        online:
+          - '&7[&bPvPBuilder&7] &cThat player is not online!'
+        file:
+          - '&7[&bPvPBuilder&7] &cThe file &6{pvpbuilder_file} &cis not found!'
+        number:
+          - '&7[&bPvPBuilder&7] &cNot a number!'
+        setup:
+          - '&7[&bPvPBuilder&7] &cThis file &6{pvpbuilder_file} &chas not been setup use the command &6/pvpbuilder setup <fileName.yml>'
+        block:
+          - '&7[&bPvPBuilder&7] &aAdded &6{pvpbuilder_amount} &afrom &6{pvpbuilder_file} &ato &6{pvpbuilder_target}'
+    spawn:
+      permission:
+        - '&7[&bPvPBuilder&7] &cYou dont have access to use this command!'
+      usage:
+        - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder spawn <type, custom, effect, sound>'
+      type:
+        usage:
+          - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder spawn type <typeName> <worldName>
+                <x> <y> <z>'
+        types:
+          - '&7[&bPvPBuilder&7] &aAvailable types:'
+          - '&7[&bPvPBuilder&7] &c{pvpbuilder_types}'
+        found:
+          - '&7[&bPvPBuilder&7] &cThat type cannot be spawned or is not found'
+        world:
+          - '&7[&bPvPBuilder&7] &cThat world is not found'
+        number:
+          - '&7[&bPvPBuilder&7] &cNot a number!'
+        spawn:
+          - '&7[&bPvPBuilder&7] &aSpawned {pvpbuilder_type} at location {pvpbuilder_world}
+                {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z}'
+      effect:
+        usage:
+          - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder spawn effect <typeName> <player>
+                <duration> <amplifier> <ambient> <particles>'
+        online:
+          - '&7[&bPvPBuilder&7] &cThat player is not online!'
+        found:
+          - '&7[&bPvPBuilder&7] &cThat type is not found'
+        boolean:
+          - '&7[&bPvPBuilder&7] &c<ambient> <particles> must be true or false'
+        number:
+          - '&7[&bPvPBuilder&7] &cNot a number!'
+        cannot:
+          - '&7[&bPvPBuilder&7] &cCannot give effect method not found'
+        types:
+          - '&7[&bPvPBuilder&7] &aAvailable effect types:'
+          - '&7[&bPvPBuilder&7] &c{pvpbuilder_effect_types}'
+        spawn:
+          - '&7[&bPvPBuilder&7] &aSpawned effect {pvpbuilder_type} to {pvpbuilder_player}
+                duration: {pvpbuilder_duration} amplifier: {pvpbuilder_amplifier}'
+      sound:
+        usage:
+          - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder spawn sound <typeName> <worldName>
+                <x> <y> <z> <volume> <pitch>'
+        found:
+          - '&7[&bPvPBuilder&7] &cThat type is not found'
+        float:
+          - '&7[&bPvPBuilder&7] &cWrong format must be 0.0'
+        world:
+          - '&7[&bPvPBuilder&7] &cThat world is not found'
+        number:
+          - '&7[&bPvPBuilder&7] &cNot a number!'
+        types:
+          - '&7[&bPvPBuilder&7] &aAvailable sound types:'
+          - '&7[&bPvPBuilder&7] &c{pvpbuilder_sound_types}'
+        spawn:
+          - '&7[&bPvPBuilder&7] &aSpawned {pvpbuilder_type} at location {pvpbuilder_world}
+                {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z}'
+      custom:
+        types:
+          - '&7[&bPvPBuilder&7] &aAvailable custom types:'
+          - '&7[&bPvPBuilder&7] &c{pvpbuilder_custom_types}'
+        found:
+          - '&7[&bPvPBuilder&7] &cThat type is not found'
+        lightning_strike:
+          usage:
+            - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder spawn custom lightning_strike
+                  <worldName> <x> <y> <z>'
+          world:
+            - '&7[&bPvPBuilder&7] &cThat world is not found'
+          number:
+            - '&7[&bPvPBuilder&7] &cNot a number!'
+          spawn:
+            - '&7[&bPvPBuilder&7] &aSpawned {pvpbuilder_type} at location {pvpbuilder_world}
+                  {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z}'
+        firework:
+          usage:
+            - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder spawn custom firework <worldName>
+                    <x> <y> <z> <power> <RGB red,green,blue:red,green,blue> <fade RGB red,green,blue:red,green,blue,
+                    null> <ballType> <flicker> <trail>'
+          types:
+            - '&7[&bPvPBuilder&7] &aAvailable firework types:'
+            - '&7[&bPvPBuilder&7] &c{pvpbuilder_firework_types}'
+          world:
+            - '&7[&bPvPBuilder&7] &cThat world is not found'
+          number:
+            - '&7[&bPvPBuilder&7] &cNot a number!'
+          color:
+            - '&7[&bPvPBuilder&7] &cError in the Power or RGB values'
+          found:
+            - '&7[&bPvPBuilder&7] &cThat type is not found'
+          boolean:
+            - '&7[&bPvPBuilder&7] &c<flicker> <trail> must be true or false'
+          spawn:
+            - '&7[&bPvPBuilder&7] &aSpawned {pvpbuilder_type} at location {pvpbuilder_world}
+                    {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z}'
+console:
+  pvpbuilder:
+    command:
+      unknown:
+        - '&7[&bPvPBuilder&7] &cUnknown sub command &f{pvpbuilder_command}'
+      message:
+        - '&c&m---------------------------------------------'
+        - '&7&l> &bPvPBuilder created by &eMathiasMC'
+        - '&7&l> &bVersion: &e{pvpbuilder_version}'
+        - '&7&l> &f/pvpbuilder help for list of commands'
+        - '&7&l> &2Any ideas for the plugin or need help?'
+        - '&7&l> &2Contact me on spigot'
+        - '&c&m---------------------------------------------'
+    help:
+      message:
+        - '&c&m---------------------------------------------'
+        - '&7&l> &f/pvpbuilder reload'
+        - '&7&l> &f/pvpbuilder message <player> <text>'
+        - '&7&l> &f/pvpbuilder wand'
+        - '&7&l> &f/pvpbuilder setup fileName.yml'
+        - '&7&l> &f/pvpbuilder zone set fileName.yml'
+        - '&7&l> &f/pvpbuilder zone remove fileName.yml'
+        - '&7&l> &f/pvpbuilder give block <player> <fileName.yml> <amount>'
+        - '&7&l> &f/pvpbuilder spawn type <typeName> <worldName> <x> <y> <z>'
+        - '&7&l> &f/pvpbuilder spawn effect <typeName> <player> <duration> <amplifier> <ambient> <particles>'
+        - '&7&l> &f/pvpbuilder spawn sound <typeName> <worldName> <x> <y> <z> <volume> <pitch>'
+        - '&7&l> &f/pvpbuilder spawn custom <lightning_strike> <worldName> <x> <y> <z>'
+        - '&7&l> &f/pvpbuilder spawn custom firework <worldName> <x> <y> <z> <power> <RGB red,green,blue:red,green,blue> <fade RGB red,green,blue:red,green,blue, null> <ballType> <flicker> <trail>'
+        - '&c&m---------------------------------------------'
+    reload:
+      reloaded:
+        - '&7[&bPvPBuilder&7] &aReloaded all configs!'
+    message:
+      usage:
+        - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder message <player> <text>'
+      online:
+        - '&7[&bPvPBuilder&7] &cThat player is not online!'
+    wand:
+      - '&7[&bPvPBuilder&7] &cOnly the player can use this command'
+    setup:
+      - '&7[&bPvPBuilder&7] &cOnly the player can use this command'
+    zone:
+      - '&7[&bPvPBuilder&7] &cOnly the player can use this command'
+    give:
+      usage:
+        - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder give block'
+      block:
+        usage:
+          - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder give block <player> <fileName.yml> <amount>'
+        online:
+          - '&7[&bPvPBuilder&7] &cThat player is not online!'
+        file:
+          - '&7[&bPvPBuilder&7] &cThe file &6{pvpbuilder_file} &cis not found!'
+        number:
+          - '&7[&bPvPBuilder&7] &cNot a number!'
+        setup:
+          - '&7[&bPvPBuilder&7] &cThis file &6{pvpbuilder_file} &chas not been setup use the command &6/pvpbuilder setup <fileName.yml>'
+        block:
+          - '&7[&bPvPBuilder&7] &aAdded &6{pvpbuilder_amount} &afrom &6{pvpbuilder_file} &ato &6{pvpbuilder_target}'
+    spawn:
+      usage:
+        - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder spawn <type, custom, effect, sound>'
+      type:
+        usage:
+          - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder spawn type <typeName> <worldName>
+                <x> <y> <z>'
+        types:
+          - '&7[&bPvPBuilder&7] &aAvailable types:'
+          - '&7[&bPvPBuilder&7] &c{pvpbuilder_types}'
+        found:
+          - '&7[&bPvPBuilder&7] &cThat type cannot be spawned or is not found'
+        world:
+          - '&7[&bPvPBuilder&7] &cThat world is not found'
+        number:
+          - '&7[&bPvPBuilder&7] &cNot a number!'
+        spawn: []
+      effect:
+        usage:
+          - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder spawn effect <typeName> <player>
+                    <duration> <amplifier> <ambient> <particles>'
+        online:
+          - '&7[&bPvPBuilder&7] &cThat player is not online!'
+        found:
+          - '&7[&bPvPBuilder&7] &cThat type is not found'
+        boolean:
+          - '&7[&bPvPBuilder&7] &c<ambient> <particles> must be true or false'
+        number:
+          - '&7[&bPvPBuilder&7] &cNot a number!'
+        cannot:
+          - '&7[&bPvPBuilder&7] &cCannot give effect method not found'
+        types:
+          - '&7[&bPvPBuilder&7] &aAvailable effect types:'
+          - '&7[&bPvPBuilder&7] &c{pvpbuilder_effect_types}'
+        spawn: []
+      sound:
+        usage:
+          - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder spawn sound <typeName> <worldName>
+                <x> <y> <z> <volume> <pitch>'
+        found:
+          - '&7[&bPvPBuilder&7] &cThat type is not found'
+        float:
+          - '&7[&bPvPBuilder&7] &cWrong format must be 0.0'
+        world:
+          - '&7[&bPvPBuilder&7] &cThat world is not found'
+        number:
+          - '&7[&bPvPBuilder&7] &cNot a number!'
+        types:
+          - '&7[&bPvPBuilder&7] &aAvailable sound types:'
+          - '&7[&bPvPBuilder&7] &c{pvpbuilder_sound_types}'
+        spawn: []
+      custom:
+        types:
+          - '&7[&bPvPBuilder&7] &aAvailable custom types:'
+          - '&7[&bPvPBuilder&7] &c{pvpbuilder_custom_types}'
+        found:
+          - '&7[&bPvPBuilder&7] &cThat type is not found'
+        lightning_strike:
+          usage:
+            - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder spawn custom lightning_strike
+                        <worldName> <x> <y> <z>'
+          world:
+            - '&7[&bPvPBuilder&7] &cThat world is not found'
+          number:
+            - '&7[&bPvPBuilder&7] &cNot a number!'
+          spawn: []
+        firework:
+          usage:
+            - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder spawn custom firework <worldName>
+                    <x> <y> <z> <power> <RGB red,green,blue:red,green,blue> <fade RGB red,green,blue:red,green,blue,
+                    null> <ballType> <flicker> <trail>'
+          types:
+            - '&7[&bPvPBuilder&7] &aAvailable firework types:'
+            - '&7[&bPvPBuilder&7] &c{pvpbuilder_firework_types}'
+          world:
+            - '&7[&bPvPBuilder&7] &cThat world is not found'
+          number:
+            - '&7[&bPvPBuilder&7] &cNot a number!'
+          color:
+            - '&7[&bPvPBuilder&7] &cError in the Power or RGB values'
+          found:
+            - '&7[&bPvPBuilder&7] &cThat type is not found'
+          boolean:
+            - '&7[&bPvPBuilder&7] &c<flicker> <trail> must be true or false'
+          spawn: []

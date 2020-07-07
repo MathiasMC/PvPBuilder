@@ -1,0 +1,30 @@
+worlds:
+  - world
+hand: []
+block1:
+  material: 'OAK_PLANKS'
+  options: '0 0 0 0 0 0 true 0 100 0'
+block2:
+  material: 'OAK_PLANKS'
+  options: '1 0 0 0 0 0 false 0 100 0'
+block3:
+  material: 'OAK_PLANKS'
+  options: '0 0 0 1 0 0 false 0 100 0'
+block4:
+  material: 'OAK_PLANKS'
+  options: '0 1 0 0 0 0 false 3 100 0'
+block5:
+  material: 'OAK_PLANKS'
+  options: '1 1 0 0 0 0 false 3 100 0'
+block6:
+  material: 'OAK_PLANKS'
+  options: '0 1 0 1 0 0 false 3 100 0'
+block7:
+  material: 'OAK_PLANKS'
+  options: '0 2 0 0 0 0 false 7 100 0'
+block8:
+  material: 'OAK_PLANKS'
+  options: '1 2 0 0 0 0 false 7 100 0'
+block9:
+  material: 'OAK_PLANKS'
+  options: '0 2 0 1 0 0 false 7 100 0'

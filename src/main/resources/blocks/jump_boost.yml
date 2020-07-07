@@ -1,0 +1,11 @@
+worlds:
+  - world
+hand: []
+block1:
+  material: 'AIR'
+  options: '0 0 0 0 0 0 true 0 0 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &aYou have got jump boost for 25 seconds'
+        - 'pvpbuilder spawn effect jump {pvpbuilder_player} 26 4 false false'

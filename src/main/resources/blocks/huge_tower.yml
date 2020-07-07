@@ -1,0 +1,477 @@
+worlds:
+  - world
+hand: []
+block1:
+  material: 'AIR'
+  options: '0 0 0 0 0 0 true 0 300 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &aBuilding Huge Tower...'
+block2:
+  material: 'AIR'
+  options: '0 1 0 0 0 0 false 0 300 0'
+block3:
+  material: 'OAK_PLANKS'
+  options: '0 0 0 1 0 0 false 0 300 0'
+block4:
+  material: 'OAK_PLANKS'
+  options: '1 0 0 0 0 0 false 0 300 0'
+block5:
+  material: 'OAK_PLANKS'
+  options: '2 0 0 0 0 1 false 0 300 0'
+block6:
+  material: 'OAK_PLANKS'
+  options: '0 0 0 2 0 1 false 0 300 0'
+block7:
+  material: 'OAK_PLANKS'
+  options: '2 0 0 0 0 2 false 0 300 0'
+block8:
+  material: 'OAK_PLANKS'
+  options: '0 0 0 2 0 2 false 0 300 0'
+block9:
+  material: 'OAK_PLANKS'
+  options: '2 0 0 0 0 3 false 0 300 0'
+block10:
+  material: 'OAK_PLANKS'
+  options: '0 0 0 2 0 3 false 0 300 0'
+block11:
+  material: 'OAK_PLANKS'
+  options: '0 0 0 1 0 4 false 0 300 0'
+block12:
+  material: 'OAK_PLANKS'
+  options: '1 0 0 0 0 4 false 0 300 0'
+block13:
+  material: 'OAK_PLANKS'
+  options: '0 0 0 0 0 4 false 0 300 0'
+block14:
+  material: 'OAK_PLANKS'
+  options: '0 1 0 1 0 0 false 5 300 0'
+block15:
+  material: 'OAK_PLANKS'
+  options: '1 1 0 0 0 0 false 5 300 0'
+block16:
+  material: 'OAK_PLANKS'
+  options: '2 1 0 0 0 1 false 5 300 0'
+block17:
+  material: 'OAK_PLANKS'
+  options: '0 1 0 2 0 1 false 5 300 0'
+block18:
+  material: 'OAK_PLANKS'
+  options: '2 1 0 0 0 2 false 5 300 0'
+block19:
+  material: 'OAK_PLANKS'
+  options: '0 1 0 2 0 2 false 5 300 0'
+block20:
+  material: 'OAK_PLANKS'
+  options: '2 1 0 0 0 3 false 5 300 0'
+block21:
+  material: 'OAK_PLANKS'
+  options: '0 1 0 2 0 3 false 5 300 0'
+block22:
+  material: 'OAK_PLANKS'
+  options: '0 1 0 1 0 4 false 5 300 0'
+block23:
+  material: 'OAK_PLANKS'
+  options: '1 1 0 0 0 4 false 5 300 0'
+block24:
+  material: 'OAK_PLANKS'
+  options: '0 1 0 0 0 4 false 5 300 0'
+block25:
+  material: 'OAK_PLANKS'
+  options: '0 2 0 0 0 0 false 10 300 0'
+block26:
+  material: 'OAK_PLANKS'
+  options: '0 2 0 1 0 0 false 10 300 0'
+block27:
+  material: 'OAK_PLANKS'
+  options: '1 2 0 0 0 0 false 10 300 0'
+block28:
+  material: 'OAK_PLANKS'
+  options: '2 2 0 0 0 1 false 10 300 0'
+block29:
+  material: 'OAK_PLANKS'
+  options: '0 2 0 2 0 1 false 10 300 0'
+block30:
+  material: 'OAK_PLANKS'
+  options: '2 2 0 0 0 2 false 10 300 0'
+block31:
+  material: 'OAK_PLANKS'
+  options: '0 2 0 2 0 2 false 10 300 0'
+block32:
+  material: 'OAK_PLANKS'
+  options: '2 2 0 0 0 3 false 10 300 0'
+block33:
+  material: 'OAK_PLANKS'
+  options: '0 2 0 2 0 3 false 10 300 0'
+block34:
+  material: 'OAK_PLANKS'
+  options: '0 2 0 1 0 4 false 10 300 0'
+block35:
+  material: 'OAK_PLANKS'
+  options: '1 2 0 0 0 4 false 10 300 0'
+block36:
+  material: 'OAK_PLANKS'
+  options: '0 2 0 0 0 4 false 10 300 0'
+block37:
+  material: 'OAK_PLANKS'
+  options: '0 3 0 0 0 0 false 15 300 0'
+block38:
+  material: 'OAK_PLANKS'
+  options: '0 3 0 1 0 0 false 15 300 0'
+block39:
+  material: 'OAK_PLANKS'
+  options: '1 3 0 0 0 0 false 15 300 0'
+block40:
+  material: 'OAK_PLANKS'
+  options: '2 3 0 0 0 1 false 15 300 0'
+block41:
+  material: 'OAK_PLANKS'
+  options: '0 3 0 2 0 1 false 15 300 0'
+block42:
+  material: 'OAK_PLANKS'
+  options: '2 3 0 0 0 2 false 15 300 0'
+block43:
+  material: 'OAK_PLANKS'
+  options: '0 3 0 2 0 2 false 15 300 0'
+block44:
+  material: 'OAK_PLANKS'
+  options: '2 3 0 0 0 3 false 15 300 0'
+block45:
+  material: 'OAK_PLANKS'
+  options: '0 3 0 2 0 3 false 15 300 0'
+block46:
+  material: 'OAK_PLANKS'
+  options: '0 3 0 1 0 4 false 15 300 0'
+block47:
+  material: 'OAK_PLANKS'
+  options: '1 3 0 0 0 4 false 15 300 0'
+block48:
+  material: 'OAK_PLANKS'
+  options: '0 3 0 0 0 4 false 15 300 0'
+block49:
+  material: 'OAK_PLANKS'
+  options: '0 4 0 0 0 0 false 20 300 0'
+block50:
+  material: 'OAK_PLANKS'
+  options: '0 4 0 1 0 0 false 20 300 0'
+block51:
+  material: 'OAK_PLANKS'
+  options: '1 4 0 0 0 0 false 20 300 0'
+block52:
+  material: 'OAK_PLANKS'
+  options: '2 4 0 0 0 1 false 20 300 0'
+block53:
+  material: 'OAK_PLANKS'
+  options: '0 4 0 2 0 1 false 20 300 0'
+block54:
+  material: 'OAK_PLANKS'
+  options: '2 4 0 0 0 2 false 20 300 0'
+block55:
+  material: 'OAK_PLANKS'
+  options: '0 4 0 2 0 2 false 20 300 0'
+block56:
+  material: 'OAK_PLANKS'
+  options: '2 4 0 0 0 3 false 20 300 0'
+block57:
+  material: 'OAK_PLANKS'
+  options: '0 4 0 2 0 3 false 20 300 0'
+block58:
+  material: 'OAK_PLANKS'
+  options: '0 4 0 1 0 4 false 20 300 0'
+block59:
+  material: 'OAK_PLANKS'
+  options: '1 4 0 0 0 4 false 20 300 0'
+block60:
+  material: 'OAK_PLANKS'
+  options: '0 4 0 0 0 4 false 20 300 0'
+block61:
+  material: 'OAK_PLANKS'
+  options: '0 5 0 0 0 0 false 25 300 0'
+block62:
+  material: 'OAK_PLANKS'
+  options: '0 5 0 1 0 0 false 25 300 0'
+block63:
+  material: 'OAK_PLANKS'
+  options: '1 5 0 0 0 0 false 25 300 0'
+block64:
+  material: 'OAK_PLANKS'
+  options: '2 5 0 0 0 1 false 25 300 0'
+block65:
+  material: 'OAK_PLANKS'
+  options: '0 5 0 2 0 1 false 25 300 0'
+block66:
+  material: 'OAK_PLANKS'
+  options: '2 5 0 0 0 2 false 25 300 0'
+block67:
+  material: 'OAK_PLANKS'
+  options: '0 5 0 2 0 2 false 25 300 0'
+block68:
+  material: 'OAK_PLANKS'
+  options: '2 5 0 0 0 3 false 25 300 0'
+block69:
+  material: 'OAK_PLANKS'
+  options: '0 5 0 2 0 3 false 25 300 0'
+block70:
+  material: 'OAK_PLANKS'
+  options: '0 5 0 1 0 4 false 25 300 0'
+block71:
+  material: 'OAK_PLANKS'
+  options: '1 5 0 0 0 4 false 25 300 0'
+block72:
+  material: 'OAK_PLANKS'
+  options: '0 5 0 0 0 4 false 25 300 0'
+block73:
+  material: 'OAK_PLANKS'
+  options: '0 6 1 0 0 0 false 30 300 0'
+block74:
+  material: 'OAK_PLANKS'
+  options: '0 6 1 1 0 0 false 30 300 0'
+block75:
+  material: 'OAK_PLANKS'
+  options: '1 6 1 0 0 0 false 30 300 0'
+block76:
+  material: 'OAK_PLANKS'
+  options: '0 6 2 0 0 0 false 30 300 0'
+block77:
+  material: 'OAK_PLANKS'
+  options: '0 6 2 1 0 0 false 30 300 0'
+block78:
+  material: 'OAK_PLANKS'
+  options: '1 6 2 0 0 0 false 30 300 0'
+block79:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 0 0 5 false 30 300 0'
+block80:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 1 0 5 false 30 300 0'
+block81:
+  material: 'OAK_PLANKS'
+  options: '1 6 0 0 0 5 false 30 300 0'
+block82:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 0 0 6 false 30 300 0'
+block83:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 1 0 6 false 30 300 0'
+block84:
+  material: 'OAK_PLANKS'
+  options: '1 6 0 0 0 6 false 30 300 0'
+block85:
+  material: 'OAK_PLANKS'
+  options: '3 6 0 0 0 1 false 30 300 0'
+block86:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 3 0 1 false 30 300 0'
+block87:
+  material: 'OAK_PLANKS'
+  options: '3 6 0 0 0 2 false 30 300 0'
+block88:
+  material: 'OAK_PLANKS'
+  options: '4 6 0 0 0 1 false 30 300 0'
+block89:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 4 0 1 false 30 300 0'
+block90:
+  material: 'OAK_PLANKS'
+  options: '4 6 0 0 0 2 false 30 300 0'
+block91:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 3 0 2 false 30 300 0'
+block92:
+  material: 'OAK_PLANKS'
+  options: '3 6 0 0 0 3 false 30 300 0'
+block93:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 3 0 3 false 30 300 0'
+block94:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 4 0 2 false 30 300 0'
+block95:
+  material: 'OAK_PLANKS'
+  options: '4 6 0 0 0 3 false 30 300 0'
+block96:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 4 0 3 false 30 300 0'
+block97:
+  material: 'OAK_PLANKS'
+  options: '2 6 0 0 0 0 false 30 300 0'
+block98:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 2 0 0 false 30 300 0'
+block99:
+  material: 'OAK_PLANKS'
+  options: '2 6 0 0 0 4 false 30 300 0'
+block100:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 2 0 4 false 30 300 0'
+block101:
+  material: 'OAK_PLANKS'
+  options: '0 6 1 2 0 0 false 35 300 0'
+block102:
+  material: 'OAK_PLANKS'
+  options: '0 6 2 2 0 0 false 35 300 0'
+block103:
+  material: 'OAK_PLANKS'
+  options: '2 6 1 0 0 0 false 35 300 0'
+block104:
+  material: 'OAK_PLANKS'
+  options: '2 6 2 0 0 0 false 35 300 0'
+block105:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 2 0 5 false 35 300 0'
+block106:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 2 0 6 false 35 300 0'
+block107:
+  material: 'OAK_PLANKS'
+  options: '2 6 0 0 0 5 false 35 300 0'
+block108:
+  material: 'OAK_PLANKS'
+  options: '2 6 0 0 0 6 false 35 300 0'
+block109:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 3 0 0 false 35 300 0'
+block110:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 4 0 0 false 35 300 0'
+block111:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 3 0 4 false 35 300 0'
+block112:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 4 0 4 false 35 300 0'
+block113:
+  material: 'OAK_PLANKS'
+  options: '3 6 0 0 0 0 false 35 300 0'
+block114:
+  material: 'OAK_PLANKS'
+  options: '4 6 0 0 0 0 false 35 300 0'
+block115:
+  material: 'OAK_PLANKS'
+  options: '3 6 0 0 0 4 false 35 300 0'
+block116:
+  material: 'OAK_PLANKS'
+  options: '4 6 0 0 0 4 false 35 300 0'
+block117:
+  material: 'OAK_PLANKS'
+  options: '0 6 1 3 0 0 false 35 300 0'
+block118:
+  material: 'OAK_PLANKS'
+  options: '3 6 1 0 0 0 false 35 300 0'
+block119:
+  material: 'OAK_PLANKS'
+  options: '0 6 0 3 0 5 false 35 300 0'
+block120:
+  material: 'OAK_PLANKS'
+  options: '3 6 0 0 0 5 false 35 300 0'
+block121:
+  material: 'OAK_PLANKS'
+  options: '2 7 0 0 0 7 false 40 300 0'
+block122:
+  material: 'OAK_PLANKS'
+  options: '1 7 0 0 0 7 false 40 300 0'
+block123:
+  material: 'OAK_PLANKS'
+  options: '0 7 0 0 0 7 false 40 300 0'
+block124:
+  material: 'OAK_PLANKS'
+  options: '0 7 0 1 0 7 false 40 300 0'
+block125:
+  material: 'OAK_PLANKS'
+  options: '0 7 0 2 0 7 false 40 300 0'
+block126:
+  material: 'OAK_PLANKS'
+  options: '2 7 3 0 0 0 false 40 300 0'
+block127:
+  material: 'OAK_PLANKS'
+  options: '1 7 3 0 0 0 false 40 300 0'
+block128:
+  material: 'OAK_PLANKS'
+  options: '0 7 3 0 0 0 false 40 300 0'
+block129:
+  material: 'OAK_PLANKS'
+  options: '0 7 3 1 0 0 false 40 300 0'
+block130:
+  material: 'OAK_PLANKS'
+  options: '0 7 3 2 0 0 false 40 300 0'
+block131:
+  material: 'OAK_PLANKS'
+  options: '5 7 0 0 0 0 false 40 300 0'
+block132:
+  material: 'OAK_PLANKS'
+  options: '5 7 0 0 0 1 false 40 300 0'
+block133:
+  material: 'OAK_PLANKS'
+  options: '5 7 0 0 0 2 false 40 300 0'
+block134:
+  material: 'OAK_PLANKS'
+  options: '5 7 0 0 0 3 false 40 300 0'
+block135:
+  material: 'OAK_PLANKS'
+  options: '5 7 0 0 0 4 false 40 300 0'
+block136:
+  material: 'OAK_PLANKS'
+  options: '0 7 0 5 0 0 false 40 300 0'
+block137:
+  material: 'OAK_PLANKS'
+  options: '0 7 0 5 0 1 false 40 300 0'
+block138:
+  material: 'OAK_PLANKS'
+  options: '0 7 0 5 0 2 false 40 300 0'
+block139:
+  material: 'OAK_PLANKS'
+  options: '0 7 0 5 0 3 false 40 300 0'
+block140:
+  material: 'OAK_PLANKS'
+  options: '0 7 0 5 0 4 false 40 300 0'
+block141:
+  material: 'OAK_PLANKS'
+  options: '0 7 1 4 0 0 false 45 300 0'
+block142:
+  material: 'OAK_PLANKS'
+  options: '0 7 2 3 0 0 false 45 300 0'
+block143:
+  material: 'OAK_PLANKS'
+  options: '4 7 1 0 0 0 false 45 300 0'
+block144:
+  material: 'OAK_PLANKS'
+  options: '3 7 2 0 0 0 false 45 300 0'
+block145:
+  material: 'OAK_PLANKS'
+  options: '0 7 0 4 0 5 false 45 300 0'
+block146:
+  material: 'OAK_PLANKS'
+  options: '0 7 0 3 0 6 false 45 300 0'
+block147:
+  material: 'OAK_PLANKS'
+  options: '4 7 0 0 0 5 false 45 300 0'
+block148:
+  material: 'OAK_PLANKS'
+  options: '3 7 0 0 0 6 false 45 300 0'
+block149:
+  material: 'AIR'
+  options: '0 1 0 0 0 2 true 35 0 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 255,0,0 0,200,255 ball true false'
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &bRemoving your tower in about 15 seconds'
+block150:
+  material: 'LADDER'
+  options: '0 0 0 0 0 3 false 5 250 1'
+block151:
+  material: 'LADDER'
+  options: '0 1 0 0 0 3 false 10 250 1'
+block152:
+  material: 'LADDER'
+  options: '0 2 0 0 0 3 false 15 250 1'
+block153:
+  material: 'LADDER'
+  options: '0 3 0 0 0 3 false 20 250 1'
+block154:
+  material: 'LADDER'
+  options: '0 4 0 0 0 3 false 25 250 1'
+block155:
+  material: 'LADDER'
+  options: '0 5 0 0 0 3 false 30 250 1'

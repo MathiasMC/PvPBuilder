@@ -1,0 +1,477 @@
+worlds:
+  - world
+hand: []
+block1:
+  material: '0:0'
+  options: '0 0 0 0 0 0 true 0 300 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &aBuilding Huge Tower...'
+block2:
+  material: '0:0'
+  options: '0 1 0 0 0 0 false 0 300 0'
+block3:
+  material: '5:0'
+  options: '0 0 0 1 0 0 false 0 300 0'
+block4:
+  material: '5:0'
+  options: '1 0 0 0 0 0 false 0 300 0'
+block5:
+  material: '5:0'
+  options: '2 0 0 0 0 1 false 0 300 0'
+block6:
+  material: '5:0'
+  options: '0 0 0 2 0 1 false 0 300 0'
+block7:
+  material: '5:0'
+  options: '2 0 0 0 0 2 false 0 300 0'
+block8:
+  material: '5:0'
+  options: '0 0 0 2 0 2 false 0 300 0'
+block9:
+  material: '5:0'
+  options: '2 0 0 0 0 3 false 0 300 0'
+block10:
+  material: '5:0'
+  options: '0 0 0 2 0 3 false 0 300 0'
+block11:
+  material: '5:0'
+  options: '0 0 0 1 0 4 false 0 300 0'
+block12:
+  material: '5:0'
+  options: '1 0 0 0 0 4 false 0 300 0'
+block13:
+  material: '5:0'
+  options: '0 0 0 0 0 4 false 0 300 0'
+block14:
+  material: '5:0'
+  options: '0 1 0 1 0 0 false 5 300 0'
+block15:
+  material: '5:0'
+  options: '1 1 0 0 0 0 false 5 300 0'
+block16:
+  material: '5:0'
+  options: '2 1 0 0 0 1 false 5 300 0'
+block17:
+  material: '5:0'
+  options: '0 1 0 2 0 1 false 5 300 0'
+block18:
+  material: '5:0'
+  options: '2 1 0 0 0 2 false 5 300 0'
+block19:
+  material: '5:0'
+  options: '0 1 0 2 0 2 false 5 300 0'
+block20:
+  material: '5:0'
+  options: '2 1 0 0 0 3 false 5 300 0'
+block21:
+  material: '5:0'
+  options: '0 1 0 2 0 3 false 5 300 0'
+block22:
+  material: '5:0'
+  options: '0 1 0 1 0 4 false 5 300 0'
+block23:
+  material: '5:0'
+  options: '1 1 0 0 0 4 false 5 300 0'
+block24:
+  material: '5:0'
+  options: '0 1 0 0 0 4 false 5 300 0'
+block25:
+  material: '5:0'
+  options: '0 2 0 0 0 0 false 10 300 0'
+block26:
+  material: '5:0'
+  options: '0 2 0 1 0 0 false 10 300 0'
+block27:
+  material: '5:0'
+  options: '1 2 0 0 0 0 false 10 300 0'
+block28:
+  material: '5:0'
+  options: '2 2 0 0 0 1 false 10 300 0'
+block29:
+  material: '5:0'
+  options: '0 2 0 2 0 1 false 10 300 0'
+block30:
+  material: '5:0'
+  options: '2 2 0 0 0 2 false 10 300 0'
+block31:
+  material: '5:0'
+  options: '0 2 0 2 0 2 false 10 300 0'
+block32:
+  material: '5:0'
+  options: '2 2 0 0 0 3 false 10 300 0'
+block33:
+  material: '5:0'
+  options: '0 2 0 2 0 3 false 10 300 0'
+block34:
+  material: '5:0'
+  options: '0 2 0 1 0 4 false 10 300 0'
+block35:
+  material: '5:0'
+  options: '1 2 0 0 0 4 false 10 300 0'
+block36:
+  material: '5:0'
+  options: '0 2 0 0 0 4 false 10 300 0'
+block37:
+  material: '5:0'
+  options: '0 3 0 0 0 0 false 15 300 0'
+block38:
+  material: '5:0'
+  options: '0 3 0 1 0 0 false 15 300 0'
+block39:
+  material: '5:0'
+  options: '1 3 0 0 0 0 false 15 300 0'
+block40:
+  material: '5:0'
+  options: '2 3 0 0 0 1 false 15 300 0'
+block41:
+  material: '5:0'
+  options: '0 3 0 2 0 1 false 15 300 0'
+block42:
+  material: '5:0'
+  options: '2 3 0 0 0 2 false 15 300 0'
+block43:
+  material: '5:0'
+  options: '0 3 0 2 0 2 false 15 300 0'
+block44:
+  material: '5:0'
+  options: '2 3 0 0 0 3 false 15 300 0'
+block45:
+  material: '5:0'
+  options: '0 3 0 2 0 3 false 15 300 0'
+block46:
+  material: '5:0'
+  options: '0 3 0 1 0 4 false 15 300 0'
+block47:
+  material: '5:0'
+  options: '1 3 0 0 0 4 false 15 300 0'
+block48:
+  material: '5:0'
+  options: '0 3 0 0 0 4 false 15 300 0'
+block49:
+  material: '5:0'
+  options: '0 4 0 0 0 0 false 20 300 0'
+block50:
+  material: '5:0'
+  options: '0 4 0 1 0 0 false 20 300 0'
+block51:
+  material: '5:0'
+  options: '1 4 0 0 0 0 false 20 300 0'
+block52:
+  material: '5:0'
+  options: '2 4 0 0 0 1 false 20 300 0'
+block53:
+  material: '5:0'
+  options: '0 4 0 2 0 1 false 20 300 0'
+block54:
+  material: '5:0'
+  options: '2 4 0 0 0 2 false 20 300 0'
+block55:
+  material: '5:0'
+  options: '0 4 0 2 0 2 false 20 300 0'
+block56:
+  material: '5:0'
+  options: '2 4 0 0 0 3 false 20 300 0'
+block57:
+  material: '5:0'
+  options: '0 4 0 2 0 3 false 20 300 0'
+block58:
+  material: '5:0'
+  options: '0 4 0 1 0 4 false 20 300 0'
+block59:
+  material: '5:0'
+  options: '1 4 0 0 0 4 false 20 300 0'
+block60:
+  material: '5:0'
+  options: '0 4 0 0 0 4 false 20 300 0'
+block61:
+  material: '5:0'
+  options: '0 5 0 0 0 0 false 25 300 0'
+block62:
+  material: '5:0'
+  options: '0 5 0 1 0 0 false 25 300 0'
+block63:
+  material: '5:0'
+  options: '1 5 0 0 0 0 false 25 300 0'
+block64:
+  material: '5:0'
+  options: '2 5 0 0 0 1 false 25 300 0'
+block65:
+  material: '5:0'
+  options: '0 5 0 2 0 1 false 25 300 0'
+block66:
+  material: '5:0'
+  options: '2 5 0 0 0 2 false 25 300 0'
+block67:
+  material: '5:0'
+  options: '0 5 0 2 0 2 false 25 300 0'
+block68:
+  material: '5:0'
+  options: '2 5 0 0 0 3 false 25 300 0'
+block69:
+  material: '5:0'
+  options: '0 5 0 2 0 3 false 25 300 0'
+block70:
+  material: '5:0'
+  options: '0 5 0 1 0 4 false 25 300 0'
+block71:
+  material: '5:0'
+  options: '1 5 0 0 0 4 false 25 300 0'
+block72:
+  material: '5:0'
+  options: '0 5 0 0 0 4 false 25 300 0'
+block73:
+  material: '5:0'
+  options: '0 6 1 0 0 0 false 30 300 0'
+block74:
+  material: '5:0'
+  options: '0 6 1 1 0 0 false 30 300 0'
+block75:
+  material: '5:0'
+  options: '1 6 1 0 0 0 false 30 300 0'
+block76:
+  material: '5:0'
+  options: '0 6 2 0 0 0 false 30 300 0'
+block77:
+  material: '5:0'
+  options: '0 6 2 1 0 0 false 30 300 0'
+block78:
+  material: '5:0'
+  options: '1 6 2 0 0 0 false 30 300 0'
+block79:
+  material: '5:0'
+  options: '0 6 0 0 0 5 false 30 300 0'
+block80:
+  material: '5:0'
+  options: '0 6 0 1 0 5 false 30 300 0'
+block81:
+  material: '5:0'
+  options: '1 6 0 0 0 5 false 30 300 0'
+block82:
+  material: '5:0'
+  options: '0 6 0 0 0 6 false 30 300 0'
+block83:
+  material: '5:0'
+  options: '0 6 0 1 0 6 false 30 300 0'
+block84:
+  material: '5:0'
+  options: '1 6 0 0 0 6 false 30 300 0'
+block85:
+  material: '5:0'
+  options: '3 6 0 0 0 1 false 30 300 0'
+block86:
+  material: '5:0'
+  options: '0 6 0 3 0 1 false 30 300 0'
+block87:
+  material: '5:0'
+  options: '3 6 0 0 0 2 false 30 300 0'
+block88:
+  material: '5:0'
+  options: '4 6 0 0 0 1 false 30 300 0'
+block89:
+  material: '5:0'
+  options: '0 6 0 4 0 1 false 30 300 0'
+block90:
+  material: '5:0'
+  options: '4 6 0 0 0 2 false 30 300 0'
+block91:
+  material: '5:0'
+  options: '0 6 0 3 0 2 false 30 300 0'
+block92:
+  material: '5:0'
+  options: '3 6 0 0 0 3 false 30 300 0'
+block93:
+  material: '5:0'
+  options: '0 6 0 3 0 3 false 30 300 0'
+block94:
+  material: '5:0'
+  options: '0 6 0 4 0 2 false 30 300 0'
+block95:
+  material: '5:0'
+  options: '4 6 0 0 0 3 false 30 300 0'
+block96:
+  material: '5:0'
+  options: '0 6 0 4 0 3 false 30 300 0'
+block97:
+  material: '5:0'
+  options: '2 6 0 0 0 0 false 30 300 0'
+block98:
+  material: '5:0'
+  options: '0 6 0 2 0 0 false 30 300 0'
+block99:
+  material: '5:0'
+  options: '2 6 0 0 0 4 false 30 300 0'
+block100:
+  material: '5:0'
+  options: '0 6 0 2 0 4 false 30 300 0'
+block101:
+  material: '5:0'
+  options: '0 6 1 2 0 0 false 35 300 0'
+block102:
+  material: '5:0'
+  options: '0 6 2 2 0 0 false 35 300 0'
+block103:
+  material: '5:0'
+  options: '2 6 1 0 0 0 false 35 300 0'
+block104:
+  material: '5:0'
+  options: '2 6 2 0 0 0 false 35 300 0'
+block105:
+  material: '5:0'
+  options: '0 6 0 2 0 5 false 35 300 0'
+block106:
+  material: '5:0'
+  options: '0 6 0 2 0 6 false 35 300 0'
+block107:
+  material: '5:0'
+  options: '2 6 0 0 0 5 false 35 300 0'
+block108:
+  material: '5:0'
+  options: '2 6 0 0 0 6 false 35 300 0'
+block109:
+  material: '5:0'
+  options: '0 6 0 3 0 0 false 35 300 0'
+block110:
+  material: '5:0'
+  options: '0 6 0 4 0 0 false 35 300 0'
+block111:
+  material: '5:0'
+  options: '0 6 0 3 0 4 false 35 300 0'
+block112:
+  material: '5:0'
+  options: '0 6 0 4 0 4 false 35 300 0'
+block113:
+  material: '5:0'
+  options: '3 6 0 0 0 0 false 35 300 0'
+block114:
+  material: '5:0'
+  options: '4 6 0 0 0 0 false 35 300 0'
+block115:
+  material: '5:0'
+  options: '3 6 0 0 0 4 false 35 300 0'
+block116:
+  material: '5:0'
+  options: '4 6 0 0 0 4 false 35 300 0'
+block117:
+  material: '5:0'
+  options: '0 6 1 3 0 0 false 35 300 0'
+block118:
+  material: '5:0'
+  options: '3 6 1 0 0 0 false 35 300 0'
+block119:
+  material: '5:0'
+  options: '0 6 0 3 0 5 false 35 300 0'
+block120:
+  material: '5:0'
+  options: '3 6 0 0 0 5 false 35 300 0'
+block121:
+  material: '5:0'
+  options: '2 7 0 0 0 7 false 40 300 0'
+block122:
+  material: '5:0'
+  options: '1 7 0 0 0 7 false 40 300 0'
+block123:
+  material: '5:0'
+  options: '0 7 0 0 0 7 false 40 300 0'
+block124:
+  material: '5:0'
+  options: '0 7 0 1 0 7 false 40 300 0'
+block125:
+  material: '5:0'
+  options: '0 7 0 2 0 7 false 40 300 0'
+block126:
+  material: '5:0'
+  options: '2 7 3 0 0 0 false 40 300 0'
+block127:
+  material: '5:0'
+  options: '1 7 3 0 0 0 false 40 300 0'
+block128:
+  material: '5:0'
+  options: '0 7 3 0 0 0 false 40 300 0'
+block129:
+  material: '5:0'
+  options: '0 7 3 1 0 0 false 40 300 0'
+block130:
+  material: '5:0'
+  options: '0 7 3 2 0 0 false 40 300 0'
+block131:
+  material: '5:0'
+  options: '5 7 0 0 0 0 false 40 300 0'
+block132:
+  material: '5:0'
+  options: '5 7 0 0 0 1 false 40 300 0'
+block133:
+  material: '5:0'
+  options: '5 7 0 0 0 2 false 40 300 0'
+block134:
+  material: '5:0'
+  options: '5 7 0 0 0 3 false 40 300 0'
+block135:
+  material: '5:0'
+  options: '5 7 0 0 0 4 false 40 300 0'
+block136:
+  material: '5:0'
+  options: '0 7 0 5 0 0 false 40 300 0'
+block137:
+  material: '5:0'
+  options: '0 7 0 5 0 1 false 40 300 0'
+block138:
+  material: '5:0'
+  options: '0 7 0 5 0 2 false 40 300 0'
+block139:
+  material: '5:0'
+  options: '0 7 0 5 0 3 false 40 300 0'
+block140:
+  material: '5:0'
+  options: '0 7 0 5 0 4 false 40 300 0'
+block141:
+  material: '5:0'
+  options: '0 7 1 4 0 0 false 45 300 0'
+block142:
+  material: '5:0'
+  options: '0 7 2 3 0 0 false 45 300 0'
+block143:
+  material: '5:0'
+  options: '4 7 1 0 0 0 false 45 300 0'
+block144:
+  material: '5:0'
+  options: '3 7 2 0 0 0 false 45 300 0'
+block145:
+  material: '5:0'
+  options: '0 7 0 4 0 5 false 45 300 0'
+block146:
+  material: '5:0'
+  options: '0 7 0 3 0 6 false 45 300 0'
+block147:
+  material: '5:0'
+  options: '4 7 0 0 0 5 false 45 300 0'
+block148:
+  material: '5:0'
+  options: '3 7 0 0 0 6 false 45 300 0'
+block149:
+  material: '0:0'
+  options: '0 1 0 0 0 2 true 35 0 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 255,0,0 0,200,255 ball true false'
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &bRemoving your tower in about 15 seconds'
+block150:
+  material: '65:0'
+  options: '0 0 0 0 0 3 false 5 250 1'
+block151:
+  material: '65:0'
+  options: '0 1 0 0 0 3 false 10 250 1'
+block152:
+  material: '65:0'
+  options: '0 2 0 0 0 3 false 15 250 1'
+block153:
+  material: '65:0'
+  options: '0 3 0 0 0 3 false 20 250 1'
+block154:
+  material: '65:0'
+  options: '0 4 0 0 0 3 false 25 250 1'
+block155:
+  material: '65:0'
+  options: '0 5 0 0 0 3 false 30 250 1'

@@ -1,0 +1,10 @@
+main: me.MathiasMC.PvPBuilder.PvPBuilder
+version: ${project.version}
+name: ${project.name}
+author: MathiasMC
+description: ${project.description}
+website: spigotmc.org/resources/pvpbuilder.61035
+api-version: 1.13
+commands:
+  pvpbuilder:
+    description: PvPBuilder main command

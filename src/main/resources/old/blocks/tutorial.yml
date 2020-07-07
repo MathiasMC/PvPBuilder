@@ -1,0 +1,42 @@
+worlds:
+  - world
+hand: []
+block1:
+  material: '0:0'
+  options: '0 0 0 0 0 0 true 0 0 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder message {pvpbuilder_player} &r'
+        - 'pvpbuilder message {pvpbuilder_player} &r'
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &eHello there, this is a little tutorial on how to use PvPBuilder'
+        - 'pvpbuilder message {pvpbuilder_player} &r'
+        - 'pvpbuilder message {pvpbuilder_player} &r'
+block2:
+  material: '0:0'
+  options: '0 0 0 0 0 0 true 50 0 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &eFirst lets create a cube of wood.'
+block3:
+  material: '5:0'
+  options: '0 0 0 0 0 0 true 150 1950 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &eI will start by creating a block at &70 0 0 0 0 0'
+block4:
+  material: '5:0'
+  options: '0 0 0 1 0 0 true 250 1850 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &eCreated an block to the left at &70 0 0 1 0 0'
+block5:
+  material: '5:0'
+  options: '1 0 0 0 0 0 true 350 1750 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &eCreated an block to the right at &71 0 0 0 0 0'

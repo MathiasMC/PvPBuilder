@@ -1,0 +1,21 @@
+worlds:
+  - world
+hand: []
+block1:
+  material: 'COBBLESTONE_STAIRS'
+  options: '0 0 0 0 0 0 true 0 100 1'
+block2:
+  material: 'COBBLESTONE'
+  options: '0 0 0 0 0 1 false 0 100 0'
+block3:
+  material: 'COBBLESTONE_STAIRS'
+  options: '0 1 0 0 0 1 false 0 100 1'
+block4:
+  material: 'COBBLESTONE'
+  options: '0 1 0 0 0 2 false 0 100 0'
+block5:
+  material: 'COBBLESTONE_STAIRS'
+  options: '0 2 0 0 0 2 false 0 100 1'
+block6:
+  material: 'COBBLESTONE'
+  options: '0 2 0 0 0 3 false 0 100 0'

@@ -1,0 +1,160 @@
+worlds:
+  - world
+hand: []
+block1:
+  material: '0:0'
+  options: '0 0 0 0 0 0 true 0 0 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &aFirework show is starting soon...'
+block2:
+  material: '0:0'
+  options: '0 0 0 0 0 10 false 40 130 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 0 0,255,0 255,0,0 ball false false'
+    remove:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 0 0,255,0 255,0,0 ball false false'
+block3:
+  material: '0:0'
+  options: '5 0 0 0 0 10 false 80 150 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 0,255,0 255,0,0 ball false false'
+    remove:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 0,255,0 255,0,0 ball false false'
+block4:
+  material: '0:0'
+  options: '0 0 0 5 0 10 false 80 150 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 0,255,0 255,0,0 ball false false'
+    remove:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 0,255,0 255,0,0 ball false false'
+block5:
+  material: '0:0'
+  options: '0 0 0 10 0 10 false 100 150 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 2 255,255,0 255,0,150 ball_large false false'
+    remove:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 2 255,255,0 255,0,150 ball_large false false'
+block6:
+  material: '0:0'
+  options: '10 0 0 0 0 10 false 100 150 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 2 255,255,0 255,0,150 ball_large false false'
+    remove:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 2 255,255,0 255,0,150 ball_large false false'
+block7:
+  material: '0:0'
+  options: '15 0 0 0 0 15 false 120 150 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 255,0,255 0,0,150 ball_large false false'
+    remove:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 255,0,255 0,0,150 ball_large false false'
+block8:
+  material: '0:0'
+  options: '0 0 0 15 0 15 false 120 150 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 255,0,255 0,0,150 ball_large false false'
+    remove:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 255,0,255 0,0,150 ball_large false false'
+block9:
+  material: '0:0'
+  options: '10 0 0 0 0 15 false 140 150 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 2 150,0,255:255,150,0 0,255,150 ball_large false false'
+    remove:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 2 150,0,255:255,150,0 0,255,150 ball_large false false'
+block10:
+  material: '0:0'
+  options: '0 0 0 10 0 15 false 140 150 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 2 150,0,255:255,150,0 0,255,150 ball_large false false'
+    remove:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 2 150,0,255:255,150,0 0,255,150 ball_large false false'
+block11:
+  material: '0:0'
+  options: '5 0 0 0 0 18 false 160 160 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 0,150,255 255,150,150 burst true true'
+    remove:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 0,150,255 255,150,150 burst true true'
+block12:
+  material: '0:0'
+  options: '0 0 0 5 0 18 false 160 160 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 0,150,255 255,150,150 burst true true'
+    remove:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 0,150,255 255,150,150 burst true true'
+block13:
+  material: '0:0'
+  options: '0 0 0 15 0 18 false 200 160 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 255,0,255 0,255,0 ball false false'
+    remove:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 255,0,255 0,255,0 ball false false'
+block14:
+  material: '0:0'
+  options: '0 0 0 12 0 18 false 210 170 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 255,0,255 0,255,0 ball false false'
+    remove:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 255,0,255 0,255,0 ball false false'
+block15:
+  material: '0:0'
+  options: '15 0 0 0 0 18 false 200 160 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 255,0,255 0,255,0 ball false false'
+    remove:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 255,0,255 0,255,0 ball false false'
+block16:
+  material: '0:0'
+  options: '12 0 0 0 0 18 false 210 170 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 255,0,255 0,255,0 ball false false'
+    remove:
+      commands:
+        - 'pvpbuilder spawn custom firework {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 255,0,255 0,255,0 ball false false'
