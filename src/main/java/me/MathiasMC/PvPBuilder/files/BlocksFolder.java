@@ -22,28 +22,24 @@ public class BlocksFolder {
             File smallWoodWall = new File(folder, "small_wood_wall.yml");
             File tinyCobblestoneStairCase = new File(folder, "small_cobblestone_staircase.yml");
             File hugeTower = new File(folder, "huge_tower.yml");
-            File tutorial = new File(folder, "tutorial.yml");
             File fireworkShow = new File(folder, "firework_show.yml");
             File jumpBoost = new File(folder, "jump_boost.yml");
             try {
                 smallWoodWall.createNewFile();
                 tinyCobblestoneStairCase.createNewFile();
                 hugeTower.createNewFile();
-                tutorial.createNewFile();
                 fireworkShow.createNewFile();
                 jumpBoost.createNewFile();
                 if (!plugin.versionID()) {
                     plugin.copy("blocks/small_wood_wall.yml", smallWoodWall);
                     plugin.copy("blocks/small_cobblestone_staircase.yml", tinyCobblestoneStairCase);
                     plugin.copy("blocks/huge_tower.yml", hugeTower);
-                    plugin.copy("blocks/tutorial.yml", tutorial);
                     plugin.copy("blocks/firework_show.yml", fireworkShow);
                     plugin.copy("blocks/jump_boost.yml", jumpBoost);
                 } else {
                     plugin.copy("old/blocks/small_wood_wall.yml", smallWoodWall);
                     plugin.copy("old/blocks/small_cobblestone_staircase.yml", tinyCobblestoneStairCase);
                     plugin.copy("old/blocks/huge_tower.yml", hugeTower);
-                    plugin.copy("old/blocks/tutorial.yml", tutorial);
                     plugin.copy("old/blocks/firework_show.yml", fireworkShow);
                     plugin.copy("old/blocks/jump_boost.yml", jumpBoost);
                 }
