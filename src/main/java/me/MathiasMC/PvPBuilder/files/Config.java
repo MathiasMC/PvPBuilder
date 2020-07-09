@@ -20,11 +20,7 @@ public class Config {
         if (!file.exists()) {
             try {
                 file.createNewFile();
-                if (!plugin.versionID()) {
-                    plugin.copy("config.yml", file);
-                } else {
-                    plugin.copy("old/config.yml", file);
-                }
+                plugin.copy("config.yml", file);
                 plugin.textUtils.info("config.yml ( A change was made )");
             } catch (IOException exception) {
                 plugin.textUtils.exception(exception.getStackTrace(), exception.getMessage());

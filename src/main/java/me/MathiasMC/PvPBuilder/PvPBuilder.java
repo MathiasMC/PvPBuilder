@@ -19,6 +19,8 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -65,7 +67,7 @@ public class PvPBuilder extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new BlockPlace(this), this);
         getServer().getPluginManager().registerEvents(new BlockBreak(this), this);
         getCommand("pvpbuilder").setExecutor(new PvPBuilder_Command(this));
-        registerWand();
+        this.wand = getWand();
         if (config.get.getBoolean("update-check")) {
             new UpdateUtils(this, 61035).getVersion(version -> {
                 if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
@@ -147,21 +149,16 @@ public class PvPBuilder extends JavaPlugin {
         return true;
     }
 
-    private void registerWand() {
-        ItemStack itemStack = getID(config.get.getString("wand.material"), 1);
-        if (itemStack != null) {
-            ItemMeta itemMeta = itemStack.getItemMeta();
-            itemMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', config.get.getString("wand.name")));
-            ArrayList<String> lores = new ArrayList<>();
-            for (String lore : config.get.getStringList("wand.lores")) {
-                lores.add(ChatColor.translateAlternateColorCodes('&', lore));
-            }
-            itemMeta.setLore(lores);
-            itemStack.setItemMeta(itemMeta);
-            this.wand = itemStack;
-            textUtils.info("Registering wand");
-        } else {
-            textUtils.warning("Wand item is not valid");
-        }
+    public ItemStack getWand() {
+        ItemStack itemStack = new ItemStack(Material.STICK);
+        ItemMeta itemMeta = itemStack.getItemMeta();
+        itemMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&bPvPBuilder Wand"));
+        ArrayList<String> list = new ArrayList<>();
+        list.add(ChatColor.translateAlternateColorCodes('&', "&6This tool is used to select points"));
+        itemMeta.setLore(list);
+        itemStack.addUnsafeEnchantment(Enchantment.ARROW_INFINITE, 0);
+        itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        itemStack.setItemMeta(itemMeta);
+        return itemStack;
     }
 }
