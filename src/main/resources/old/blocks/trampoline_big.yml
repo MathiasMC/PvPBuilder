@@ -1,0 +1,126 @@
+worlds:
+  - world
+hand: []
+area:
+  start: 1 2 0 0 0 1
+  end: 0 4 0 1 0 3
+  delay: 45
+  delay-disappear: 230
+  groups:
+    default:
+      permission: pvpbuilder.area
+      all-players: false
+      time: 5
+      commands:
+        - 'pvpbuilder spawn effect jump {pvpbuilder_player} 1 20 false false'
+        - 'pvpbuilder spawn effect health_boost {pvpbuilder_player} 5 4 false false'
+        - 'pvpbuilder spawn effect heal {pvpbuilder_player} 1 2 false false'
+        - 'particle portal {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 1 1 0.1 25'
+      commands-last:
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &cSorry all the jump boost in this area is used'
+block1:
+  material: '0:0'
+  options: '0 0 0 0 0 0 true 0 0 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &aBuilding a big trampoline for you and it will last 10 seconds'
+block2:
+  material: '85:0'
+  options: '2 0 0 0 0 0 false 0 200 0'
+block3:
+  material: '85:0'
+  options: '0 0 0 2 0 0 false 0 200 0'
+block4:
+  material: '85:0'
+  options: '2 0 0 0 0 4 false 0 200 0'
+block5:
+  material: '85:0'
+  options: '0 0 0 2 0 4 false 0 200 0'
+block6:
+  material: '22:0'
+  options: '2 1 0 0 0 0 false 10 200 0'
+block7:
+  material: '22:0'
+  options: '0 1 0 2 0 0 false 10 200 0'
+block8:
+  material: '22:0'
+  options: '2 1 0 0 0 4 false 10 200 0'
+block9:
+  material: '22:0'
+  options: '0 1 0 2 0 4 false 10 200 0'
+block10:
+  material: '22:0'
+  options: '2 1 0 1 0 0 false 20 200 0'
+block11:
+  material: '22:0'
+  options: '3 1 0 1 0 1 false 20 200 0'
+block12:
+  material: '22:0'
+  options: '0 1 0 1 0 0 false 20 200 0'
+block13:
+  material: '22:0'
+  options: '0 1 0 2 0 1 false 20 200 0'
+block14:
+  material: '22:0'
+  options: '2 1 0 1 0 4 false 20 200 0'
+block15:
+  material: '22:0'
+  options: '3 1 0 1 0 3 false 20 200 0'
+block16:
+  material: '22:0'
+  options: '0 1 0 1 0 4 false 20 200 0'
+block17:
+  material: '22:0'
+  options: '0 1 0 2 0 3 false 20 200 0'
+block18:
+  material: '22:0'
+  options: '0 1 0 0 0 0 false 25 200 0'
+block19:
+  material: '22:0'
+  options: '0 1 0 0 0 4 false 25 200 0'
+block20:
+  material: '22:0'
+  options: '2 1 0 0 0 2 false 25 200 0'
+block21:
+  material: '22:0'
+  options: '0 1 0 2 0 2 false 25 200 0'
+block22:
+  material: '173:0'
+  options: '1 1 0 0 0 1 false 30 200 0'
+block23:
+  material: '173:0'
+  options: '0 1 0 1 0 1 false 30 200 0'
+block24:
+  material: '173:0'
+  options: '1 1 0 0 0 3 false 30 200 0'
+block25:
+  material: '173:0'
+  options: '0 1 0 1 0 3 false 30 200 0'
+block26:
+  material: '173:0'
+  options: '0 1 0 0 0 1 false 35 200 0'
+block27:
+  material: '173:0'
+  options: '0 1 0 0 0 3 false 35 200 0'
+block28:
+  material: '173:0'
+  options: '1 1 0 0 0 2 false 35 200 0'
+block29:
+  material: '173:0'
+  options: '0 1 0 1 0 2 false 35 200 0'
+block30:
+  material: '173:0'
+  options: '0 1 0 0 0 2 false 40 200 0'
+block31:
+  material: '65:0'
+  options: '0 1 1 0 0 0 false 45 175 1'
+block32:
+  material: '65:0'
+  options: '0 1 0 0 0 5 false 45 175 4'
+block33:
+  material: '65:0'
+  options: '3 1 0 0 0 2 false 45 175 3'
+block34:
+  material: '65:0'
+  options: '0 1 0 3 0 2 false 45 175 2'

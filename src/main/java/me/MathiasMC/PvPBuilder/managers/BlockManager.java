@@ -31,11 +31,20 @@ public class BlockManager {
         int blockZ = location.getBlockZ();
         World world = location.getWorld();
         String direction = plugin.calculateManager.getDirection(player);
+        FileConfiguration fileConfiguration = plugin.blocksFileConfiguration.get(fileName);
         for (int i = 0; i < plugin.systemManager.getBlocks(fileName).size(); i++) {
-            String[] split = plugin.blocksFileConfiguration.get(fileName).getString(plugin.systemManager.getBlocks(fileName).get(i) + ".options").split(" ");
+            String[] split = fileConfiguration.getString(plugin.systemManager.getBlocks(fileName).get(i) + ".options").split(" ");
             Location currentLocation = plugin.calculateManager.getCalculatedBlockLocation(blockX, blockY, blockZ, world, direction, split);
             if (currentLocation != null) {
-                setLocationBlock(currentLocation, split, direction, plugin.itemStackArray.get(fileName).get(i), player, plugin.blocksFileConfiguration.get(fileName), plugin.systemManager.getBlocks(fileName).get(i));
+                setLocationBlock(currentLocation, split, direction, plugin.itemStackArray.get(fileName).get(i), player, fileConfiguration, plugin.systemManager.getBlocks(fileName).get(i));
+            }
+        }
+        if (fileConfiguration.contains("area")) {
+            String areaGroup = plugin.areaManager.getAreaGroup(player, fileConfiguration);
+            if (areaGroup != null) {
+                Location start = plugin.calculateManager.getCalculatedBlockLocation(blockX, blockY, blockZ, player.getWorld(), direction, fileConfiguration.getString("area.start").split(" "));
+                Location end = plugin.calculateManager.getCalculatedBlockLocation(blockX, blockY, blockZ, player.getWorld(), direction, fileConfiguration.getString("area.end").split(" "));
+                plugin.areaManager.run(player, fileConfiguration, areaGroup, start, end);
             }
         }
     }

@@ -24,24 +24,32 @@ public class BlocksFolder {
             File hugeTower = new File(folder, "huge_tower.yml");
             File fireworkShow = new File(folder, "firework_show.yml");
             File jumpBoost = new File(folder, "jump_boost.yml");
+            File trampolineSmall = new File(folder, "trampoline_small.yml");
+            File trampolineBig = new File(folder, "trampoline_big.yml");
             try {
                 smallWoodWall.createNewFile();
                 tinyCobblestoneStairCase.createNewFile();
                 hugeTower.createNewFile();
                 fireworkShow.createNewFile();
                 jumpBoost.createNewFile();
+                trampolineSmall.createNewFile();
+                trampolineBig.createNewFile();
                 if (!plugin.versionID()) {
                     plugin.copy("blocks/small_wood_wall.yml", smallWoodWall);
                     plugin.copy("blocks/small_cobblestone_staircase.yml", tinyCobblestoneStairCase);
                     plugin.copy("blocks/huge_tower.yml", hugeTower);
                     plugin.copy("blocks/firework_show.yml", fireworkShow);
                     plugin.copy("blocks/jump_boost.yml", jumpBoost);
+                    plugin.copy("blocks/trampoline_small.yml", trampolineSmall);
+                    plugin.copy("blocks/trampoline_big.yml", trampolineBig);
                 } else {
                     plugin.copy("old/blocks/small_wood_wall.yml", smallWoodWall);
                     plugin.copy("old/blocks/small_cobblestone_staircase.yml", tinyCobblestoneStairCase);
                     plugin.copy("old/blocks/huge_tower.yml", hugeTower);
                     plugin.copy("old/blocks/firework_show.yml", fireworkShow);
                     plugin.copy("old/blocks/jump_boost.yml", jumpBoost);
+                    plugin.copy("old/blocks/trampoline_small.yml", trampolineSmall);
+                    plugin.copy("old/blocks/trampoline_big.yml", trampolineBig);
                 }
             } catch (IOException exception) {
                 plugin.textUtils.exception(exception.getStackTrace(), exception.getMessage());

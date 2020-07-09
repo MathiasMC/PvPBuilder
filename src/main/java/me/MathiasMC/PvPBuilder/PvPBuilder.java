@@ -7,6 +7,7 @@ import me.MathiasMC.PvPBuilder.files.Config;
 import me.MathiasMC.PvPBuilder.files.Language;
 import me.MathiasMC.PvPBuilder.listeners.BlockBreak;
 import me.MathiasMC.PvPBuilder.listeners.BlockPlace;
+import me.MathiasMC.PvPBuilder.managers.AreaManager;
 import me.MathiasMC.PvPBuilder.managers.BlockManager;
 import me.MathiasMC.PvPBuilder.managers.CalculateManager;
 import me.MathiasMC.PvPBuilder.managers.SystemManager;
@@ -41,6 +42,7 @@ public class PvPBuilder extends JavaPlugin {
     public SystemManager systemManager;
     public BlockManager blockManager;
     public CalculateManager calculateManager;
+    public AreaManager areaManager;
     public BlocksFolder blocksFolder;
     public ItemStack wand;
     public final ConsoleCommandSender consoleCommandSender = Bukkit.getServer().getConsoleSender();
@@ -63,6 +65,7 @@ public class PvPBuilder extends JavaPlugin {
         systemManager = new SystemManager(this);
         blockManager = new BlockManager(this);
         calculateManager = new CalculateManager(this);
+        areaManager = new AreaManager(this);
         blocksFolder = new BlocksFolder(this);
         getServer().getPluginManager().registerEvents(new BlockPlace(this), this);
         getServer().getPluginManager().registerEvents(new BlockBreak(this), this);

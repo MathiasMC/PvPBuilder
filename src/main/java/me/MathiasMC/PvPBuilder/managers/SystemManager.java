@@ -36,7 +36,7 @@ public class SystemManager {
         FileConfiguration fileConfiguration = plugin.blocksFileConfiguration.get(fileName);
         if (fileConfiguration != null) {
             for (String key : fileConfiguration.getConfigurationSection("").getKeys(false)) {
-                if (!key.equalsIgnoreCase("worlds") && !key.equalsIgnoreCase("hand") && !key.equalsIgnoreCase("zone")) {
+                if (!key.equalsIgnoreCase("worlds") && !key.equalsIgnoreCase("hand") && !key.equalsIgnoreCase("zone") && !key.equalsIgnoreCase("area")) {
                     itemStacks.add(key);
                 }
             }
