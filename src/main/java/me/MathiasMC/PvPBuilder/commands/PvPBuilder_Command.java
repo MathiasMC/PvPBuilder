@@ -8,6 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Firework;
+import org.bukkit.entity.IronGolem;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.FireworkMeta;
@@ -16,6 +17,8 @@ import org.bukkit.potion.PotionEffectType;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.regex.Pattern;
 
@@ -605,6 +608,55 @@ public class PvPBuilder_Command implements CommandExecutor {
                                                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
                                                 }
                                             }
+                                        } else if (args[2].equalsIgnoreCase("iron_golem")) {
+                                            if (args.length == 9) {
+                                                World world = plugin.getServer().getWorld(args[3]);
+                                                if (world != null) {
+                                                    if (plugin.isInt(args[4]) && plugin.isInt(args[5]) && plugin.isInt(args[6])) {
+                                                        Player target = plugin.getServer().getPlayer(args[7]);
+                                                        if (target != null) {
+                                                            if (plugin.config.get.contains("iron_golem." + args[8])) {
+                                                                IronGolem ironGolem = (IronGolem) world.spawnEntity(new Location(world, Integer.parseInt(args[4]), Integer.parseInt(args[5]), Integer.parseInt(args[6])), EntityType.IRON_GOLEM);
+                                                                ironGolem.setPlayerCreated(false);
+                                                                ironGolem.setRemoveWhenFarAway(false);
+                                                                ironGolem.setHealth(plugin.config.get.getInt("iron_golem." + args[8] + ".health"));
+                                                                ironGolem.setCustomName(ChatColor.translateAlternateColorCodes('&', plugin.config.get.getString("iron_golem." + args[8] + ".name").replace("{pvpbuilder_player}", target.getName())));
+                                                                ironGolem.setCustomNameVisible(true);
+                                                                plugin.ironGolemManager.ironGolemGroup.put(ironGolem, args[8]);
+                                                                plugin.ironGolemManager.ironGolemOwner.put(ironGolem, target);
+                                                                plugin.ironGolemManager.run(plugin.config.get.getLong("iron_golem." + args[8] + ".update"),
+                                                                        plugin.config.get.getLong("iron_golem." + args[8] + ".delay-disappear"),
+                                                                        plugin.config.get.getLong("iron_golem." + args[8] + ".radius"),
+                                                                        plugin.config.get.getLong("iron_golem." + args[8] + ".tp-radius"),
+                                                                        target, ironGolem);
+                                                                for (String message : plugin.language.get.getStringList(path + ".pvpbuilder.spawn.custom.iron_golem.spawn")) {
+                                                                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+                                                                }
+                                                            } else {
+                                                                for (String message : plugin.language.get.getStringList(path + ".pvpbuilder.spawn.custom.iron_golem.found")) {
+                                                                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+                                                                }
+                                                            }
+                                                        } else {
+                                                            for (String message : plugin.language.get.getStringList(path + ".pvpbuilder.spawn.custom.iron_golem.online")) {
+                                                                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+                                                            }
+                                                        }
+                                                    } else {
+                                                        for (String message : plugin.language.get.getStringList(path + ".pvpbuilder.spawn.custom.iron_golem.number")) {
+                                                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+                                                        }
+                                                    }
+                                                } else {
+                                                    for (String message : plugin.language.get.getStringList(path + ".pvpbuilder.spawn.custom.iron_golem.world")) {
+                                                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+                                                    }
+                                                }
+                                            } else {
+                                                for (String message : plugin.language.get.getStringList(path + ".pvpbuilder.spawn.custom.iron_golem.usage")) {
+                                                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+                                                }
+                                            }
                                         } else {
                                             for (String message : plugin.language.get.getStringList(path + ".pvpbuilder.spawn.custom.found")) {
                                                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
@@ -614,6 +666,7 @@ public class PvPBuilder_Command implements CommandExecutor {
                                         ArrayList<String> list = new ArrayList<>();
                                         list.add("lightning_strike");
                                         list.add("firework");
+                                        list.add("iron_golem");
                                         for (String message : plugin.language.get.getStringList(path + ".pvpbuilder.spawn.custom.types")) {
                                             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message.replace("{pvpbuilder_custom_types}", list.toString().replace("[", "").replace("]", ""))));
                                         }

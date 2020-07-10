@@ -7,10 +7,8 @@ import me.MathiasMC.PvPBuilder.files.Config;
 import me.MathiasMC.PvPBuilder.files.Language;
 import me.MathiasMC.PvPBuilder.listeners.BlockBreak;
 import me.MathiasMC.PvPBuilder.listeners.BlockPlace;
-import me.MathiasMC.PvPBuilder.managers.AreaManager;
-import me.MathiasMC.PvPBuilder.managers.BlockManager;
-import me.MathiasMC.PvPBuilder.managers.CalculateManager;
-import me.MathiasMC.PvPBuilder.managers.SystemManager;
+import me.MathiasMC.PvPBuilder.listeners.EntityDamageByEntity;
+import me.MathiasMC.PvPBuilder.managers.*;
 import me.MathiasMC.PvPBuilder.utils.Metrics;
 import me.MathiasMC.PvPBuilder.utils.TextUtils;
 import me.MathiasMC.PvPBuilder.utils.UpdateUtils;
@@ -43,6 +41,7 @@ public class PvPBuilder extends JavaPlugin {
     public BlockManager blockManager;
     public CalculateManager calculateManager;
     public AreaManager areaManager;
+    public IronGolemManager ironGolemManager;
     public BlocksFolder blocksFolder;
     public ItemStack wand;
     public final ConsoleCommandSender consoleCommandSender = Bukkit.getServer().getConsoleSender();
@@ -66,9 +65,11 @@ public class PvPBuilder extends JavaPlugin {
         blockManager = new BlockManager(this);
         calculateManager = new CalculateManager(this);
         areaManager = new AreaManager(this);
+        ironGolemManager = new IronGolemManager(this);
         blocksFolder = new BlocksFolder(this);
-        getServer().getPluginManager().registerEvents(new BlockPlace(this), this);
-        getServer().getPluginManager().registerEvents(new BlockBreak(this), this);
+        if (config.get.getBoolean("events.BlockPlace")) { getServer().getPluginManager().registerEvents(new BlockPlace(this), this); }
+        if (config.get.getBoolean("events.BlockBreak")) { getServer().getPluginManager().registerEvents(new BlockBreak(this), this); }
+        if (config.get.getBoolean("events.EntityDamageByEntity")) { getServer().getPluginManager().registerEvents(new EntityDamageByEntity(this), this); }
         getCommand("pvpbuilder").setExecutor(new PvPBuilder_Command(this));
         this.wand = getWand();
         if (config.get.getBoolean("update-check")) {
@@ -86,6 +87,7 @@ public class PvPBuilder extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        ironGolemManager.removeAll();
         call = null;
     }
 

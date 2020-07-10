@@ -8,3 +8,46 @@
 
 # Check for updates on startup?
 update-check: true
+
+# You can disable events here.
+events:
+  BlockBreak: true
+  BlockPlace: true
+  EntityDamageByEntity: true
+
+# Iron golem
+iron_golem:
+  default:
+
+    # Name of the iron golem
+    name: '&c{pvpbuilder_player} Iron Golem'
+
+    # Check for entity´s in that block radius around the player
+    radius: 20
+
+    # How many blocks the player must be away for the iron golem to teleport to you
+    tp-radius: 20
+
+    # How long before the iron golem will disappear (seconds)
+    delay-disappear: 30
+
+    # Health of the iron golem 0-100
+    health: 100
+
+    # Check for entity´s around the player (20 = 1 second)
+    update: 20
+
+    # Commands to run when iron golem has killed an entity, disappeared
+    commands:
+      player:
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &eYour golem has killed &c{pvpbuilder_target} &e+&65 &eseconds speed'
+        - 'pvpbuilder spawn effect speed {pvpbuilder_player} 5 0 false false'
+      mob:
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &eYour golem has killed &c{pvpbuilder_target} &e+&65 &eseconds speed'
+        - 'pvpbuilder spawn effect speed {pvpbuilder_player} 5 0 false false'
+      animal:
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &eYour golem has killed &c{pvpbuilder_target} &e+&65 &eseconds speed'
+        - 'pvpbuilder spawn effect speed {pvpbuilder_player} 5 0 false false'
+      remove:
+        disappear:
+          - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &eYou no longer have your iron golem'

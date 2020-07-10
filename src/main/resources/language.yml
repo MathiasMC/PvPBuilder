@@ -37,6 +37,7 @@ player:
         - '&7&l> &f/pvpbuilder spawn sound <typeName> <worldName> <x> <y> <z> <volume> <pitch>'
         - '&7&l> &f/pvpbuilder spawn custom <lightning_strike> <worldName> <x> <y> <z>'
         - '&7&l> &f/pvpbuilder spawn custom firework <worldName> <x> <y> <z> <power> <RGB red,green,blue:red,green,blue> <fade RGB red,green,blue:red,green,blue, null> <ballType> <flicker> <trail>'
+        - '&7&l> &f/pvpbuilder spawn custom iron_golem <worldName> <x> <y> <z> <player> <configType>'
         - '&c&m---------------------------------------------'
     reload:
       permission:
@@ -218,6 +219,18 @@ player:
           spawn:
             - '&7[&bPvPBuilder&7] &aSpawned {pvpbuilder_type} at location {pvpbuilder_world}
                     {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z}'
+        iron_golem:
+          usage:
+            - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder spawn custom iron_golem <worldName> <x> <y> <z> <player> <configType>'
+          world:
+            - '&7[&bPvPBuilder&7] &cThat world is not found'
+          number:
+            - '&7[&bPvPBuilder&7] &cNot a number!'
+          online:
+            - '&7[&bPvPBuilder&7] &cThe player is not online!'
+          found:
+            - '&7[&bPvPBuilder&7] &cThat type is not found'
+          spawn: []
 console:
   pvpbuilder:
     command:
@@ -246,6 +259,7 @@ console:
         - '&7&l> &f/pvpbuilder spawn sound <typeName> <worldName> <x> <y> <z> <volume> <pitch>'
         - '&7&l> &f/pvpbuilder spawn custom <lightning_strike> <worldName> <x> <y> <z>'
         - '&7&l> &f/pvpbuilder spawn custom firework <worldName> <x> <y> <z> <power> <RGB red,green,blue:red,green,blue> <fade RGB red,green,blue:red,green,blue, null> <ballType> <flicker> <trail>'
+        - '&7&l> &f/pvpbuilder spawn custom iron_golem <worldName> <x> <y> <z> <player> <configType>'
         - '&c&m---------------------------------------------'
     reload:
       reloaded:
@@ -361,4 +375,16 @@ console:
             - '&7[&bPvPBuilder&7] &cThat type is not found'
           boolean:
             - '&7[&bPvPBuilder&7] &c<flicker> <trail> must be true or false'
+          spawn: []
+        iron_golem:
+          usage:
+            - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder spawn custom iron_golem <worldName> <x> <y> <z> <player> <configType>'
+          world:
+            - '&7[&bPvPBuilder&7] &cThat world is not found'
+          number:
+            - '&7[&bPvPBuilder&7] &cNot a number!'
+          online:
+            - '&7[&bPvPBuilder&7] &cThe player is not online!'
+          found:
+            - '&7[&bPvPBuilder&7] &cThat type is not found'
           spawn: []

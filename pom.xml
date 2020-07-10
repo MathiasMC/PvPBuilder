@@ -6,7 +6,7 @@
 
     <groupId>me.MathiasMC</groupId>
     <artifactId>PvPBuilder</artifactId>
-    <version>1.1.9</version>
+    <version>1.2.0</version>
     <name>PvPBuilder</name>
     <description>PvPBuilder can build things when you place blocks</description>
 

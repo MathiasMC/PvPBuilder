@@ -1,0 +1,11 @@
+worlds:
+  - world
+hand: []
+block1:
+  material: 'AIR'
+  options: '0 0 0 0 0 0 true 0 0 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder spawn custom iron_golem {pvpbuilder_world} {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} {pvpbuilder_player} default'
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &aYou have spawned a iron golem that will follow you and protect you from players, animals, mobs within 20 blocks, and it will last 30 seconds'
