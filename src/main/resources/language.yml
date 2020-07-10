@@ -38,6 +38,7 @@ player:
         - '&7&l> &f/pvpbuilder spawn custom <lightning_strike> <worldName> <x> <y> <z>'
         - '&7&l> &f/pvpbuilder spawn custom firework <worldName> <x> <y> <z> <power> <RGB red,green,blue:red,green,blue> <fade RGB red,green,blue:red,green,blue, null> <ballType> <flicker> <trail>'
         - '&7&l> &f/pvpbuilder spawn custom iron_golem <worldName> <x> <y> <z> <player> <configType>'
+        - '&7&l> &f/pvpbuilder action no_knockback <player>'
         - '&c&m---------------------------------------------'
     reload:
       permission:
@@ -67,6 +68,15 @@ player:
           - '&7[&bPvPBuilder&7] &aCleared all pos'
         same:
           - '&7[&bPvPBuilder&7] &cYou cannot select the same point!'
+    action:
+      permission:
+        - '&7[&bPvPBuilder&7] &cYou dont have access to use this command!'
+      usage:
+        - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder action no_knockback <player>'
+      online:
+        - '&7[&bPvPBuilder&7] &cThat player is not online!'
+      type:
+        - '&7[&bPvPBuilder&7] &cThat type is not found!'
     setup:
       permission:
         - '&7[&bPvPBuilder&7] &cYou dont have access to use this command!'
@@ -260,6 +270,7 @@ console:
         - '&7&l> &f/pvpbuilder spawn custom <lightning_strike> <worldName> <x> <y> <z>'
         - '&7&l> &f/pvpbuilder spawn custom firework <worldName> <x> <y> <z> <power> <RGB red,green,blue:red,green,blue> <fade RGB red,green,blue:red,green,blue, null> <ballType> <flicker> <trail>'
         - '&7&l> &f/pvpbuilder spawn custom iron_golem <worldName> <x> <y> <z> <player> <configType>'
+        - '&7&l> &f/pvpbuilder action no_knockback <player>'
         - '&c&m---------------------------------------------'
     reload:
       reloaded:
@@ -271,6 +282,13 @@ console:
         - '&7[&bPvPBuilder&7] &cThat player is not online!'
     wand:
       - '&7[&bPvPBuilder&7] &cOnly the player can use this command'
+    action:
+      usage:
+        - '&7[&bPvPBuilder&7] &cUsage: /pvpbuilder action no_knockback <player>'
+      online:
+        - '&7[&bPvPBuilder&7] &cThat player is not online!'
+      type:
+        - '&7[&bPvPBuilder&7] &cThat type is not found!'
     setup:
       - '&7[&bPvPBuilder&7] &cOnly the player can use this command'
     zone:

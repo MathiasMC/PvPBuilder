@@ -14,6 +14,13 @@ events:
   BlockBreak: true
   BlockPlace: true
   EntityDamageByEntity: true
+  PlayerVelocity: true
+
+# Action command
+action:
+
+  # no knockback remove player after that time when the command is run (20 = 1 second) (about 160 is recommended)
+  no_knockback-remove: 160
 
 # Iron golem
 iron_golem:

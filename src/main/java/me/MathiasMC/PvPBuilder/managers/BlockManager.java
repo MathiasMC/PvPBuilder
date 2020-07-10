@@ -36,7 +36,12 @@ public class BlockManager {
             String[] split = fileConfiguration.getString(plugin.systemManager.getBlocks(fileName).get(i) + ".options").split(" ");
             Location currentLocation = plugin.calculateManager.getCalculatedBlockLocation(blockX, blockY, blockZ, world, direction, split);
             if (currentLocation != null) {
-                setLocationBlock(currentLocation, split, direction, plugin.itemStackArray.get(fileName).get(i), player, fileConfiguration, plugin.systemManager.getBlocks(fileName).get(i));
+                Material material = currentLocation.getBlock().getType();
+                ItemStack itemStack = plugin.itemStackArray.get(fileName).get(i);
+                if (currentLocation.getBlock().getType().equals(itemStack.getType())) {
+                    material = null;
+                }
+                setLocationBlock(currentLocation, split, direction, itemStack, player, fileConfiguration, plugin.systemManager.getBlocks(fileName).get(i), material);
             }
         }
         if (fileConfiguration.contains("area")) {
@@ -49,39 +54,45 @@ public class BlockManager {
         }
     }
 
-    private void setLocationBlock(Location locationBlock, String[] split, String direction, ItemStack itemStack, Player player, FileConfiguration fileConfiguration, String currentGroup) {
+    private void setLocationBlock(Location locationBlock, String[] split, String direction, ItemStack itemStack, Player player, FileConfiguration fileConfiguration, String currentGroup, Material block) {
         if (split[6].equalsIgnoreCase("false")) {
             if (locationBlock.getBlock().getType().equals(Material.AIR)) {
                 if (Integer.parseInt(split[7]) > 0) {
-                    scheduleTime(locationBlock, split, direction, itemStack, player, fileConfiguration, currentGroup);
+                    scheduleTime(locationBlock, split, direction, itemStack, player, fileConfiguration, currentGroup, block);
                 } else {
                     setBlock(locationBlock.getBlock(), itemStack, player, fileConfiguration, currentGroup);
-                    removeBlocks(split, locationBlock, player, fileConfiguration, currentGroup);
+                    removeBlocks(split, locationBlock, player, fileConfiguration, currentGroup, block);
                     setState(locationBlock, split, direction);
                 }
             }
         } else if (Integer.parseInt(split[7]) > 0) {
-            scheduleTime(locationBlock, split, direction, itemStack, player, fileConfiguration, currentGroup);
+            scheduleTime(locationBlock, split, direction, itemStack, player, fileConfiguration, currentGroup, block);
         } else {
             setBlock(locationBlock.getBlock(), itemStack, player, fileConfiguration, currentGroup);
-            removeBlocks(split, locationBlock, player, fileConfiguration, currentGroup);
+            removeBlocks(split, locationBlock, player, fileConfiguration, currentGroup, block);
             setState(locationBlock, split, direction);
         }
     }
 
-    private void scheduleTime(final Location location, final String[] split, final String direction, final ItemStack itemStack, final Player player, final FileConfiguration fileConfiguration, final String currentGroup) {
+    private void scheduleTime(final Location location, final String[] split, final String direction, final ItemStack itemStack, final Player player, final FileConfiguration fileConfiguration, final String currentGroup, Material block) {
         plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, () -> {
             setBlock(location.getBlock(), itemStack, player, fileConfiguration, currentGroup);
-            removeBlocks(split, location, player, fileConfiguration, currentGroup);
+            removeBlocks(split, location, player, fileConfiguration, currentGroup, block);
             setState(location, split, direction);
         }, Long.parseLong(split[7]));
     }
 
-    private void removeBlocks(String[] split, final Location location, final Player player, final FileConfiguration fileConfiguration, final String currentGroup) {
+    private void removeBlocks(String[] split, final Location location, final Player player, final FileConfiguration fileConfiguration, final String currentGroup, Material block) {
         if (Integer.parseInt(split[8]) > 0) {
             plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, () ->{
-                location.getBlock().setType(Material.AIR);
                 dispatchBlockCommands(fileConfiguration, player, currentGroup, location, "remove");
+                if (split.length > 10 && split[10].equalsIgnoreCase("true")) {
+                    if (block != null) {
+                        location.getBlock().setType(block);
+                    }
+                    return;
+                }
+                location.getBlock().setType(Material.AIR);
             }, Long.parseLong(split[8]));
         }
     }

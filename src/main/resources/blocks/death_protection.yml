@@ -1,0 +1,77 @@
+worlds:
+  - world
+hand: []
+area:
+  start: 1 0 1 0 0 0
+  end: 0 2 0 1 0 1
+  delay: 35
+  delay-disappear: 200
+  groups:
+    default:
+      permission: pvpbuilder.area
+      all-players: false
+      time: 10
+      commands:
+        - 'pvpbuilder action no_knockback {pvpbuilder_player}'
+        - 'pvpbuilder spawn effect regeneration {pvpbuilder_player} 1 9 0 false'
+        - 'particle portal {pvpbuilder_x} {pvpbuilder_y} {pvpbuilder_z} 1 1 1 0.1 25'
+      commands-last:
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &cSorry all the protection in this area is used'
+block1:
+  material: 'AIR'
+  options: '0 0 0 0 0 0 true 0 0 0'
+  commands:
+    set:
+      commands:
+        - 'pvpbuilder message {pvpbuilder_player} &7[&bPvPBuilder&7] &aMaking an protection zone for you!'
+block2:
+  material: 'DIAMOND_BLOCK'
+  options: '0 0 2 0 1 0 true 10 200 0 true'
+block3:
+  material: 'DIAMOND_BLOCK'
+  options: '0 0 0 0 1 2 true 10 200 0 true'
+block4:
+  material: 'DIAMOND_BLOCK'
+  options: '2 0 0 0 1 0 true 10 200 0 true'
+block5:
+  material: 'DIAMOND_BLOCK'
+  options: '0 0 0 2 1 0 true 10 200 0 true'
+block6:
+  material: 'DIAMOND_BLOCK'
+  options: '0 0 2 1 1 0 true 20 200 0 true'
+block7:
+  material: 'DIAMOND_BLOCK'
+  options: '1 0 2 0 1 0 true 20 200 0 true'
+block8:
+  material: 'DIAMOND_BLOCK'
+  options: '0 0 0 1 1 2 true 20 200 0 true'
+block9:
+  material: 'DIAMOND_BLOCK'
+  options: '1 0 0 0 1 2 true 20 200 0 true'
+block10:
+  material: 'DIAMOND_BLOCK'
+  options: '2 0 0 0 1 1 true 20 200 0 true'
+block11:
+  material: 'DIAMOND_BLOCK'
+  options: '2 0 1 0 1 0 true 20 200 0 true'
+block12:
+  material: 'DIAMOND_BLOCK'
+  options: '0 0 0 2 1 1 true 20 200 0 true'
+block13:
+  material: 'DIAMOND_BLOCK'
+  options: '0 0 1 2 1 0 true 20 200 0 true'
+block14:
+  material: 'DIAMOND_BLOCK'
+  options: '2 0 2 0 1 0 true 30 200 0 true'
+block15:
+  material: 'DIAMOND_BLOCK'
+  options: '0 0 2 2 1 0 true 30 200 0 true'
+block16:
+  material: 'DIAMOND_BLOCK'
+  options: '2 0 0 0 1 2 true 30 200 0 true'
+block17:
+  material: 'DIAMOND_BLOCK'
+  options: '0 0 0 2 1 2 true 30 200 0 true'
+block18:
+  material: 'BEACON'
+  options: '0 3 0 0 0 0 true 35 200 0 true'

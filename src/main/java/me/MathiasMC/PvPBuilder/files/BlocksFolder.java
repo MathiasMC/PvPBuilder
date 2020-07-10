@@ -27,6 +27,7 @@ public class BlocksFolder {
             File trampolineSmall = new File(folder, "trampoline_small.yml");
             File trampolineBig = new File(folder, "trampoline_big.yml");
             File ironGolem = new File(folder, "iron_golem.yml");
+            File deathProtection = new File(folder, "death_protection.yml");
             try {
                 smallWoodWall.createNewFile();
                 tinyCobblestoneStairCase.createNewFile();
@@ -36,6 +37,7 @@ public class BlocksFolder {
                 trampolineSmall.createNewFile();
                 trampolineBig.createNewFile();
                 ironGolem.createNewFile();
+                deathProtection.createNewFile();
                 if (!plugin.versionID()) {
                     plugin.copy("blocks/small_wood_wall.yml", smallWoodWall);
                     plugin.copy("blocks/small_cobblestone_staircase.yml", tinyCobblestoneStairCase);
@@ -45,6 +47,7 @@ public class BlocksFolder {
                     plugin.copy("blocks/trampoline_small.yml", trampolineSmall);
                     plugin.copy("blocks/trampoline_big.yml", trampolineBig);
                     plugin.copy("blocks/iron_golem.yml", ironGolem);
+                    plugin.copy("blocks/death_protection.yml", deathProtection);
                 } else {
                     plugin.copy("old/blocks/small_wood_wall.yml", smallWoodWall);
                     plugin.copy("old/blocks/small_cobblestone_staircase.yml", tinyCobblestoneStairCase);
@@ -54,6 +57,7 @@ public class BlocksFolder {
                     plugin.copy("old/blocks/trampoline_small.yml", trampolineSmall);
                     plugin.copy("old/blocks/trampoline_big.yml", trampolineBig);
                     plugin.copy("old/blocks/iron_golem.yml", ironGolem);
+                    plugin.copy("old/blocks/death_protection.yml", deathProtection);
                 }
             } catch (IOException exception) {
                 plugin.textUtils.exception(exception.getStackTrace(), exception.getMessage());

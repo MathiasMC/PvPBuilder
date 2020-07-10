@@ -8,6 +8,7 @@ import me.MathiasMC.PvPBuilder.files.Language;
 import me.MathiasMC.PvPBuilder.listeners.BlockBreak;
 import me.MathiasMC.PvPBuilder.listeners.BlockPlace;
 import me.MathiasMC.PvPBuilder.listeners.EntityDamageByEntity;
+import me.MathiasMC.PvPBuilder.listeners.PlayerVelocity;
 import me.MathiasMC.PvPBuilder.managers.*;
 import me.MathiasMC.PvPBuilder.utils.Metrics;
 import me.MathiasMC.PvPBuilder.utils.TextUtils;
@@ -29,6 +30,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class PvPBuilder extends JavaPlugin {
 
@@ -51,6 +53,7 @@ public class PvPBuilder extends JavaPlugin {
     public final HashMap<String, File> blocksFile = new HashMap<>();
     public final HashMap<String, Location> pos1 = new HashMap<>();
     public final HashMap<String, Location> pos2 = new HashMap<>();
+    public final HashSet<String> action_no_knockback = new HashSet<>();
 
     @Override
     public void onEnable() {
@@ -70,6 +73,7 @@ public class PvPBuilder extends JavaPlugin {
         if (config.get.getBoolean("events.BlockPlace")) { getServer().getPluginManager().registerEvents(new BlockPlace(this), this); }
         if (config.get.getBoolean("events.BlockBreak")) { getServer().getPluginManager().registerEvents(new BlockBreak(this), this); }
         if (config.get.getBoolean("events.EntityDamageByEntity")) { getServer().getPluginManager().registerEvents(new EntityDamageByEntity(this), this); }
+        if (config.get.getBoolean("events.PlayerVelocity")) { getServer().getPluginManager().registerEvents(new PlayerVelocity(this), this); }
         getCommand("pvpbuilder").setExecutor(new PvPBuilder_Command(this));
         this.wand = getWand();
         if (config.get.getBoolean("update-check")) {

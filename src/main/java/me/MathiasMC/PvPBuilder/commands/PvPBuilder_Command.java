@@ -125,6 +125,39 @@ public class PvPBuilder_Command implements CommandExecutor {
                                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
                             }
                         }
+                    } else if (args[0].equalsIgnoreCase("action")) {
+                        unknown = false;
+                        if (sender.hasPermission("pvpbuilder.command.action")) {
+                            if (args.length == 3) {
+                                Player target = plugin.getServer().getPlayer(args[2]);
+                                if (target != null) {
+                                    if (args[1].equalsIgnoreCase("no_knockback")) {
+                                        String targetUUID = target.getUniqueId().toString();
+                                        plugin.action_no_knockback.remove(targetUUID);
+                                        plugin.action_no_knockback.add(targetUUID);
+                                        plugin.getServer().getScheduler().runTaskLater(plugin, () -> {
+                                            plugin.action_no_knockback.remove(targetUUID);
+                                        }, plugin.config.get.getLong("action.no_knockback-remove"));
+                                    } else {
+                                        for (String message : plugin.language.get.getStringList(path + ".pvpbuilder.action.type")) {
+                                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+                                        }
+                                    }
+                                } else {
+                                    for (String message : plugin.language.get.getStringList(path + ".pvpbuilder.action.online")) {
+                                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+                                    }
+                                }
+                            } else {
+                                for (String message : plugin.language.get.getStringList(path + ".pvpbuilder.action.usage")) {
+                                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+                                }
+                            }
+                        } else {
+                            for (String message : plugin.language.get.getStringList("player.pvpbuilder.action.permission")) {
+                                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+                            }
+                        }
                     } else if (args[0].equalsIgnoreCase("setup")) {
                         unknown = false;
                         if (path.equalsIgnoreCase("player")) {
